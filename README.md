@@ -1,4 +1,4 @@
-# cs - Create script
+# cs - create script
 
 A bash script file will be created with .sh suffix in the filename and #!/bin/bash shebang inside.
 
