@@ -1,6 +1,6 @@
 # cs - create script
 
-A bash script file will be created with .sh suffix in the filename and #!/bin/bash shebang inside.
+A bash script file will be created with #!/bin/bash shebang inside.
 
 
 ## Requirements
@@ -20,6 +20,6 @@ To use the program:
 
 ## Example
 
-    cs mybashscript
+    cs mybashscript.sh
 
 This will create a file with the filename mybashscript.sh in the current folder. The file contains #!/bin/bash in the first line.

@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-int fileexists(const char * filename){
+int fileExists(char * filename){
     /* try to open file to check if exists */
     FILE *file;
-    if (file = fopen(filename, "r")){
+    if ((file = fopen(filename, "r"))){
         fclose(file);
         return 1; /* file exists */
     }
@@ -14,10 +14,9 @@ int fileexists(const char * filename){
 int main(int argc, char **argv){
 
     int i;
-    char str[] = "#!/bin/bash\n";
-    char suffix[] = ".sh";
+    char shebang[] = "#!/bin/bash\n";
 
-    if(fileexists(argv[1])){
+    if(fileExists(argv[1])){
         printf("File already exists\n");
         return 0; 
     }
@@ -28,12 +27,12 @@ int main(int argc, char **argv){
     }
 
     FILE *fp;
-    fp = fopen (strcat(argv[1],suffix), "w"); /* create and open file*/
+    fp = fopen (argv[1], "w"); /* create and open file*/
 
 
-    for (i = 0; str[i] != '\n'; i++) {
+    for (i = 0; shebang[i] != '\n'; i++) {
             /* write to file using fputc() function */
-            fputc(str[i], fp);
+            fputc(shebang[i], fp);
         }
 
 }
